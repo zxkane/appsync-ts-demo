@@ -1,0 +1,70 @@
+{
+  "name": "typescript-cli-template",
+  "version": "1.0.0",
+  "description": "template for a typescript cli application",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npx tsc",
+    "start": "ts-node src/index.ts",
+    "lint": "npx eslint src/**/*.ts",
+    "test": "npx ava"
+  },
+  "repository": "git://github.com/jackcmeyer/typescript-cli-template.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "author": "Jack Meyer",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "ava": "^2.4.0",
+    "chalk": "^4.1.0",
+    "commander": "^6.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/core": "^9.1.1",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "commitlint-config-gitmoji": "^1.0.1",
+    "cross-env": "^7.0.2",
+    "cz-emoji": "^1.2.2",
+    "dateformat": "^3.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.2.5",
+    "mocha": "8.1.1",
+    "nodemon": "^2.0.4",
+    "ts-mockito": "^2.6.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "sources": [
+      "../test/*.ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn test"
+    }
+  }
+}
