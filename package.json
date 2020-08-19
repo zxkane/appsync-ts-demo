@@ -20,9 +20,20 @@
     "node": ">=6"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.1.0",
+    "apollo-client": "^2.0.3",
+    "apollo-link": "^1.0.3",
+    "apollo-link-http": "^1.2.0",
     "ava": "^2.4.0",
+    "aws-appsync": "^4.0.0",
     "chalk": "^4.1.0",
-    "commander": "^6.0.0"
+    "commander": "^6.0.0",
+    "es6-promise": "^4.1.1",
+    "graphql": "^0.11.7",
+    "graphql-tag": "^2.5.0",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^2.6.0",
+    "ws": "^3.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
