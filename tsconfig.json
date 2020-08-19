@@ -11,6 +11,7 @@
     "strictNullChecks": false,
     "types": ["node"],
     "esModuleInterop": true,
+    "noImplicitAny": false,
     "resolveJsonModule": true
   },
   "exclude": ["./test", "lib"]

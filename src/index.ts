@@ -30,7 +30,6 @@ mutation createImage_go {
 `);
 
 const main = async () => {
-    
     const credentials = AWS.config.credentials;
 
     global.fetch = require("isomorphic-fetch");
